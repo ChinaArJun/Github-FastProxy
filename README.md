@@ -12,11 +12,11 @@
    1. 安装Docker Compose，具体参考 [Install the Compose plugin](https://docs.docker.com/compose/install/linux/)
    2. 安装CertBot，用于域名免费证书的申请，具体可以参考 [CertBot官网](https://certbot.eff.org/)
    3. 安装Git，具体参考[Git Download](https://git-scm.com/downloads)
-
+   4. 通过 docker获取证书 sudo docker run -it --rm --name certbot             -v "/etc/letsencrypt:/etc/letsencrypt"             -v "/var/lib/letsencrypt:/var/lib/letsencrypt"             certbot/certbot certonly
 ## 步骤
 
 1. git clone 本项目
-2. 替换本项目中所有的example.com，替换为已购买的域名，按需替换。需要替换的文件有：
+2. 替换本项目中所有的toloveshop.com，替换为已购买的域名，按需替换。需要替换的文件有：
    * nginx/cert.sh
    * nginx/nginx.conf
    * nginx/conf.d/ssl.conf
@@ -31,13 +31,13 @@
 
 #### nginx
 
-这里主要说明一下转发逻辑。以example.com为例子。
+这里主要说明一下转发逻辑。以toloveshop.com为例子。
 
 nginx监听了80端口、443端口和8443端口，其中仅80和443是对外开放接口，对应listen的conf是 **nginx/conf.d/default.conf**、**nginx/nginx.conf** 和 **nginx/conf.d/ssl.conf**
 
 * 如果请求进入80端口，则会自动重定向到443端口
 * 如果请求进入443端口，则会根据域名进行分流
-  * 如果域名是trojan.example.com，则会直接打到trojan服务监听的端口号，即8080端口
+  * 如果域名是trojan.toloveshop.com，则会直接打到trojan服务监听的端口号，即8080端口
   * 其余情况，nginx会打到自身监控的8443端口，请求进入8443端口后，分流如下
     * 如果 **path=/v2ray/vless** ，则请求转发到vless服务，端口号11000
     * 如果 **path=/v2ray/vmess** ，则请求转发到vmess服务，端口号12000

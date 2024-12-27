@@ -28,10 +28,10 @@ function setDomain() {
   'v2fly5.vmess-trojan-shadowsocks/nginx/nginx.conf' 'v2fly5.vmess-trojan-shadowsocks/nginx/conf.d/ssl.conf'
   'cert.sh')
   read -r -p "请输入域名：" domain
-  purple "替换配置文件中的默认域名 (example.com)"
+  purple "替换配置文件中的默认域名 (toloveshop.com)"
   for file in "${files[@]}"; do
         if [ -f "$file" ]; then
-            sed -i.bak "s/example.com/$domain/g" "$file"
+            sed -i.bak "s/toloveshop.com/$domain/g" "$file"
         else
             purple "文件 $file 不存在"
         fi
@@ -54,7 +54,7 @@ function setUser() {
     purple "替换配置文件中的预置用户"
     for file in "${files[@]}"; do
       if [ -f "$file" ]; then
-        sed -i.bak "s/your user id/$user/g" "$file"
+        sed -i.bak "s/2a41fd04-ba17-4d59-8084-9ba4b04c587a/$user/g" "$file"
       else
         purple "文件 $file 不存在"
       fi

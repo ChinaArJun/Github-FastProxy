@@ -2,10 +2,10 @@
   "run_type": "server",
   "local_addr": "0.0.0.0",
   "local_port": 8080,
-  "remote_addr": "127.0.0.1",
+  "remote_addr": "trojan.toloveshop.com",
   "remote_port": 443,
   "password": [
-    "your password"
+    "2a41fd04-ba17-4d59-8084-9ba4b04c587a"
   ],
   "log_level": 1,
   "ssl": {
@@ -28,7 +28,7 @@
     "plain_http_response": "",
     "curves": "",
     "dhparam": "",
-    "sni": "trojan.example.com"
+    "sni": "trojan.toloveshop.com"
   },
   "tcp": {
     "prefer_ipv4": false,
@@ -41,7 +41,7 @@
   "websocket": {
         "enabled": true,
         "path": "/trojan",
-        "host": "trojan.example.com"
+        "host": "trojan.toloveshop.com"
   },
   "mysql": {
     "enabled": false,

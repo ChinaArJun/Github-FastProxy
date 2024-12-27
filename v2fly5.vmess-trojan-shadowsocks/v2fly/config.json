@@ -42,7 +42,7 @@
       "port": 12000,
       "protocol": "vmess",
       "settings": {
-        "users": [ "your user id" ]
+        "users": [ "2a41fd04-ba17-4d59-8084-9ba4b04c587a" ]
       },
       "streamSettings": {
         "transport": "ws",

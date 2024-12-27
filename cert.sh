@@ -3,8 +3,8 @@
 curr_dir=$(dirname $(readlink -f "$0"))
 echo "$curr_dir"
 
-certbot certonly --standalone -d trojan.example.com -d vmess.example.com -d shadowsocks.example.com -d vless.weaxsey.org
-from_path="/etc/letsencrypt/live/trojan.example.com"
+certbot certonly --standalone -d trojan.toloveshop.com -d vmess.toloveshop.com -d shadowsocks.toloveshop.com -d vless.weaxsey.org
+from_path="/etc/letsencrypt/live/trojan.toloveshop.com"
 cp "$from_path"/fullchain.pem "$from_path"/fullchain.crt
 cp "$from_path"/privkey.pem "$from_path"/privkey.key
 

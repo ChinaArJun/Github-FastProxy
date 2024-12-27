@@ -22,7 +22,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "your user id",
+                        "id": "2a41fd04-ba17-4d59-8084-9ba4b04c587a",
                         "level": 0,
                         "email": "love@v2fly.org"
                     }
@@ -44,7 +44,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "your user id"
+                        "id": "2a41fd04-ba17-4d59-8084-9ba4b04c587a"
                     }
                 ]
             },
